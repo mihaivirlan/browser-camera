@@ -1,0 +1,23 @@
+div.container {
+    margin-top: 10px;
+}
+video {
+    width:240px;
+    height:180px;
+}
+.col-sm-6 {
+      margin-top: 10px;
+}
+video {
+    border-radius: 5px;
+}
+#imageTag {
+    width:240px;
+    height:180px;
+    border-radius: 5px;
+    display:none;
+}
+.btn:hover {
+    background: #033eff;
+    color: white;
+}

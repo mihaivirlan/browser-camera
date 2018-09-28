@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Camera</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="script" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p><button id="act" type="button" class="btn btn-lg btn-default" onclick="getStream('video')">Start video</button></p>
+                <video controls autoplay></video>
+                <img id="imageTag">
+            </div>
+
+        </div>
+    </div>
+<script src="app.js"></script>
+<script src="sw.js"></script>
+</body>
+</html>
