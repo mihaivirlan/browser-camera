@@ -75,6 +75,10 @@ function takePhoto() {
         .then(blob => {
             var theImageTag = document.getElementById("imageTag");
             theImageTag.src = URL.createObjectURL(blob);
+
+            fetch("http://localhost:3000/data", {mode: 'no-cors', method: 'POST', body: blob}).then(res => {
+                console.log(res);
+            });
             console.log('Image URI: ', theImageTag.src);
         })
         .catch(err => alert('Error: ' + err));
