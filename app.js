@@ -76,7 +76,12 @@ function takePhoto() {
             var theImageTag = document.getElementById("imageTag");
             theImageTag.src = URL.createObjectURL(blob);
 
-            fetch("http://localhost:3000/data", {mode: 'no-cors', method: 'POST', body: blob}).then(res => {
+            let payload = new FormData();
+            payload.append('img', blob);
+
+            console.log('blob is ', payload);
+
+            fetch("http://localhost:3000/data", {mode: 'no-cors', method: 'POST', body: payload, headers:{'Content-Type': 'application/x-www-form-urlencoded'}  }).then(res => {
                 console.log(res);
             });
             console.log('Image URI: ', theImageTag.src);
